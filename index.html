@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Houston, Texas</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero-banner">
+        <h1>Discover Houston, Texas</h1>
+    </header>
+    <nav>
+        <a href="#about">About Houston</a>
+        <a href="#attractions">Top Attractions</a>
+        <a href="#things-to-do">Things to Do</a>
+        <a href="#faq">FAQ</a>
+    </nav>
+    <section id="about" class="content">
+        <h2>About Houston</h2>
+        <img src="beautiful-overhead-cityscape-shot-with-drone.jpg" alt="Houston Cityscape" class="hero-image">
+        <p>Houston, Texas, is a dynamic metropolis that plays a crucial role in the United States and the world. Known as the "Space City," it is home to NASA’s Johnson Space Center, which has been at the forefront of space exploration for decades. Houston is also a global hub for the energy industry, particularly oil and gas, contributing significantly to the U.S. and international economies. Culturally, the city is a melting pot, with a diverse population that influences its world-renowned culinary scene, vibrant arts district, and rich musical heritage, spanning jazz, blues, and hip-hop. With top-tier medical institutions like the Texas Medical Center—the largest in the world—Houston is a leader in healthcare and innovation. This blend of scientific achievement, economic influence, and cultural diversity makes Houston a city of global significance.</p>
+    </section>
+    <section id="attractions" class="content">
+        <h2>Top Attractions</h2>
+        <table>
+            <tr>
+                <th>Attraction</th>
+                <th>Best Time to Visit</th>
+                <th>Famous For</th>
+            </tr>
+            <tr>
+                <td>Space Center Houston</td>
+                <td>Spring & Fall</td>
+                <td>NASA exhibits, space exploration</td>
+            </tr>
+            <tr>
+                <td>Houston Museum District</td>
+                <td>Year-round</td>
+                <td>Art, history, science museums</td>
+            </tr>
+            <tr>
+                <td>Hermann Park</td>
+                <td>Spring & Winter</td>
+                <td>Botanical gardens, outdoor activities</td>
+            </tr>
+            <tr>
+                <td>The Galleria</td>
+                <td>Year-round</td>
+                <td>Shopping, luxury brands</td>
+            </tr>
+        </table>
+    </section>
+    <section id="things-to-do" class="content">
+        <h2>Things to Do</h2>
+        <ul>
+            <li>Explore the Space Center Houston</li>
+            <li>Visit the Houston Zoo</li>
+            <li>Try delicious Tex-Mex cuisine</li>
+            <li>Enjoy live music and theater in the downtown district</li>
+        </ul>
+        <h2>Top Attractions Ranked</h2>
+        <ol>
+            <li>Space Center Houston</li>
+            <li>Houston Museum of Natural Science</li>
+            <li>Hermann Park</li>
+            <li>Buffalo Bayou Park</li>
+        </ol>
+    </section>
+    <section id="faq" class="content faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>What is the best time to visit Houston?</h3>
+            <p>The best time to visit Houston is during the spring (March to May) and fall (September to November) when the weather is pleasant and outdoor activities are enjoyable.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Is Houston an expensive city to visit?</h3>
+            <p>Houston is relatively affordable compared to other major U.S. cities. While luxury experiences are available, many attractions, such as parks and museums, offer free or low-cost entry.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How do I get around in Houston?</h3>
+            <p>Houston has a well-developed public transportation system, including buses and light rail. However, renting a car is the most convenient way to explore the city.</p>
+        </div>
+    </section>
+    <footer>
+        <p>Contact us: info@discoverhouston.com</p>
+        <div class="social-media">
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.faq-item h3').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+                parent.querySelector('p').classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
