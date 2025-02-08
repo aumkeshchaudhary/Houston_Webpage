@@ -1,0 +1,198 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background: linear-gradient(135deg, #004080, #4CAF50);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #388E3C;
+}
+
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.header {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-image {
+    width: 70%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px auto;
+    display: block;
+}
+
+.content {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #004080;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+    transition: background-color 0.3s ease;
+}
+
+ul, ol {
+    padding-left: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+ul li::before, ol li::before {
+    content: "";
+    display: inline-block;
+    width: 0.4em;
+    height: 0.4em;
+    margin-right: 0.5em;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+ul li, ol li {
+    color: #333;
+}
+
+li {
+    margin: 5px 0;
+}
+
+.faq {
+    margin-top: 20px;
+}
+
+.faq h3 {
+    color: #004080;
+}
+
+.faq p {
+    margin-bottom: 10px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-item h3 {
+    cursor: pointer;
+    color: #004080;
+}
+
+.faq-item p {
+    display: none;
+    margin-top: 5px;
+}
+
+.faq-item p.show {
+    display: block;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    border-top: 1px solid #555;
+}
+
+footer .social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    color: #4CAF50;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    .content {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+}
