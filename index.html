@@ -5,7 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Houston, Texas</title>
     <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .slides img {
+            width: 100%; /* Ensure all images are the same size */
+            height: 400px; /* Set a fixed height for all images */
+            object-fit: contain; /* Ensure images fit within the area without cropping */
+            display: block;
+            margin: auto;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #ddd;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+    </style>
 </head>
 <body>
     <header class="hero-banner">
@@ -19,7 +83,24 @@
     </nav>
     <section id="about" class="content">
         <h2>About Houston</h2>
-        <img src="beautiful-overhead-cityscape-shot-with-drone.jpg" alt="Houston Cityscape" class="hero-image">
+        <div class="slideshow-container">
+            <div class="slides">
+                <img src="downtown-la-los-angeles-skyline-california_79295-3203.jpg" alt="Los Angeles Skyline">
+            </div>
+            <div class="slides">
+                <img src="complex-aerial-view-city.jpg" alt="Aerial View of City">
+            </div>
+            <div class="slides">
+                <img src="beautiful-overhead-cityscape-shot-with-drone.jpg" alt="Houston Cityscape">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
         <p>Houston, Texas, is a dynamic metropolis that plays a crucial role in the United States and the world. Known as the "Space City," it is home to NASA’s Johnson Space Center, which has been at the forefront of space exploration for decades. Houston is also a global hub for the energy industry, particularly oil and gas, contributing significantly to the U.S. and international economies. Culturally, the city is a melting pot, with a diverse population that influences its world-renowned culinary scene, vibrant arts district, and rich musical heritage, spanning jazz, blues, and hip-hop. With top-tier medical institutions like the Texas Medical Center—the largest in the world—Houston is a leader in healthcare and innovation. This blend of scientific achievement, economic influence, and cultural diversity makes Houston a city of global significance.</p>
     </section>
     <section id="attractions" class="content">
@@ -29,26 +110,73 @@
                 <th>Attraction</th>
                 <th>Best Time to Visit</th>
                 <th>Famous For</th>
+                <th>Location</th>
+                <th>Entry Fee</th>
+                <th>Highlights</th>
             </tr>
             <tr>
                 <td>Space Center Houston</td>
                 <td>Spring & Fall</td>
-                <td>NASA exhibits, space exploration</td>
+                <td>NASA exhibits & space history</td>
+                <td>Clear Lake</td>
+                <td>$25</td>
+                <td>Mission Control, Moon rocks, Astronaut encounters</td>
             </tr>
             <tr>
-                <td>Houston Museum District</td>
+                <td>Houston Museum of Natural Science</td>
                 <td>Year-round</td>
-                <td>Art, history, science museums</td>
+                <td>Dinosaurs, gems, planetarium</td>
+                <td>Museum District</td>
+                <td>$20</td>
+                <td>Butterfly Center, IMAX Theatre, Fossil Hall</td>
             </tr>
             <tr>
-                <td>Hermann Park</td>
-                <td>Spring & Winter</td>
-                <td>Botanical gardens, outdoor activities</td>
+                <td>The Museum of Fine Arts</td>
+                <td>Year-round</td>
+                <td>Classical & contemporary art</td>
+                <td>Museum District</td>
+                <td>$18</td>
+                <td>Van Gogh & Picasso paintings, Photography exhibits</td>
+            </tr>
+            <tr>
+                <td>Buffalo Bayou Park</td>
+                <td>Spring & Fall</td>
+                <td>Scenic trails & outdoor activities</td>
+                <td>Downtown</td>
+                <td>Free</td>
+                <td>Kayaking, Cistern tours, Skyline views</td>
+            </tr>
+            <tr>
+                <td>Hermann Park & Zoo</td>
+                <td>Spring & Fall</td>
+                <td>Lush gardens & exotic animals</td>
+                <td>Museum District</td>
+                <td>$15</td>
+                <td>Train rides, Japanese Garden, Over 6,000 animals</td>
             </tr>
             <tr>
                 <td>The Galleria</td>
                 <td>Year-round</td>
-                <td>Shopping, luxury brands</td>
+                <td>Luxury shopping & ice skating</td>
+                <td>Uptown</td>
+                <td>Free</td>
+                <td>High-end brands, Indoor ice rink, Fine dining</td>
+            </tr>
+            <tr>
+                <td>Minute Maid Park</td>
+                <td>Baseball season</td>
+                <td>Home of the Houston Astros</td>
+                <td>Downtown</td>
+                <td>$30</td>
+                <td>Live MLB games, Retractable roof, Stadium tours</td>
+            </tr>
+            <tr>
+                <td>Kemah Boardwalk</td>
+                <td>Summer & Fall</td>
+                <td>Waterfront amusement park</td>
+                <td>Kemah</td>
+                <td>Free (rides cost extra)</td>
+                <td>Roller coasters, Seafood restaurants, Boat rides</td>
             </tr>
         </table>
     </section>
@@ -99,6 +227,26 @@
                 parent.querySelector('p').classList.toggle('show');
             });
         });
+
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
     </script>
 </body>
 </html>
