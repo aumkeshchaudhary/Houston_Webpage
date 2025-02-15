@@ -239,6 +239,11 @@
         <p class="footer-copy">Copyright © 2025 Discover Houston</p>
     </footer>
     <script>
+        // Prevent automatic scroll restoration on page load
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
         document.querySelectorAll('.faq-item h3').forEach(item => {
             item.addEventListener('click', () => {
                 const parent = item.parentElement;
