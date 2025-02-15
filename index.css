@@ -31,9 +31,21 @@ nav a {
     color: #FFD700;
 }
 
+nav a:link {
+    color: #FFD700; /* Default style for unvisited links */
+}
+
+nav a:visited {
+    color: #DAA520; /* Style for visited links */
+}
+
 nav a:hover {
     background-color: #FF6347;
     color: #FFFFFF;
+}
+
+nav a:active {
+    color: #FF4500; /* Style when clicking */
 }
 
 .header {
@@ -188,6 +200,22 @@ footer .social-media a {
 
 footer .social-media a:hover {
     color: #4CAF50;
+}
+
+footer a:link {
+    color: #FFD700; /* Default style for unvisited external link */
+}
+
+footer a:visited {
+    color: #DAA520; /* Style for visited external link */
+}
+
+footer a:hover {
+    color: #4CAF50; /* Style for hovering over external link */
+}
+
+footer a:active {
+    color: #FF4500; /* Style when clicking external link */
 }
 
 @media (max-width: 768px) {
