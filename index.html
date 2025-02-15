@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover Houston, Texas</title>
     <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <style>
         .slideshow-container {
             position: relative;
@@ -81,149 +81,174 @@
         <a href="#things-to-do">Things to Do</a>
         <a href="#faq">FAQ</a>
     </nav>
-    <section id="about" class="content">
-        <h2>About Houston</h2>
-        <div class="slideshow-container">
-            <div class="slides">
-                <img src="downtown-la-los-angeles-skyline-california_79295-3203.jpg" alt="Los Angeles Skyline">
+    <main>
+        <section id="about" class="content">
+            <h2>About Houston</h2>
+            <div class="slideshow-container">
+                <div class="slides">
+                    <img src="downtown-la-los-angeles-skyline-california_79295-3203.jpg" alt="Los Angeles Skyline">
+                </div>
+                <div class="slides">
+                    <img src="complex-aerial-view-city.jpg" alt="Aerial View of City">
+                </div>
+                <div class="slides">
+                    <img src="beautiful-overhead-cityscape-shot-with-drone.jpg" alt="Houston Cityscape">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            <div class="slides">
-                <img src="complex-aerial-view-city.jpg" alt="Aerial View of City">
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
-            <div class="slides">
-                <img src="beautiful-overhead-cityscape-shot-with-drone.jpg" alt="Houston Cityscape">
+            <p>Houston, Texas, is a dynamic metropolis that plays a crucial role in the United States and the world. Known as the "Space City," it is home to NASA’s Johnson Space Center, which has been at the forefront of space exploration for decades. Houston is also a global hub for the energy industry, particularly oil and gas, contributing significantly to the U.S. and international economies. Culturally, the city is a melting pot, with a diverse population that influences its world-renowned culinary scene, vibrant arts district, and rich musical heritage, spanning jazz, blues, and hip-hop. With top-tier medical institutions like the Texas Medical Center—the largest in the world—Houston is a leader in healthcare and innovation. This blend of scientific achievement, economic influence, and cultural diversity makes Houston a city of global significance.</p>
+        </section>
+        <section id="attractions" class="content">
+            <h2>Top Attractions</h2>
+            <table>
+                <tr>
+                    <th>Attraction</th>
+                    <th>Best Time to Visit</th>
+                    <th>Famous For</th>
+                    <th>Location</th>
+                    <th>Entry Fee</th>
+                    <th>Highlights</th>
+                </tr>
+                <tr>
+                    <td>Space Center Houston</td>
+                    <td>Spring & Fall</td>
+                    <td>NASA exhibits & space history</td>
+                    <td>Clear Lake</td>
+                    <td>$25</td>
+                    <td>Mission Control, Moon rocks, Astronaut encounters</td>
+                </tr>
+                <tr>
+                    <td>Houston Museum of Natural Science</td>
+                    <td>Year-round</td>
+                    <td>Dinosaurs, gems, planetarium</td>
+                    <td>Museum District</td>
+                    <td>$20</td>
+                    <td>Butterfly Center, IMAX Theatre, Fossil Hall</td>
+                </tr>
+                <tr>
+                    <td>The Museum of Fine Arts</td>
+                    <td>Year-round</td>
+                    <td>Classical & contemporary art</td>
+                    <td>Museum District</td>
+                    <td>$18</td>
+                    <td>Van Gogh & Picasso paintings, Photography exhibits</td>
+                </tr>
+                <tr>
+                    <td>Buffalo Bayou Park</td>
+                    <td>Spring & Fall</td>
+                    <td>Scenic trails & outdoor activities</td>
+                    <td>Downtown</td>
+                    <td>Free</td>
+                    <td>Kayaking, Cistern tours, Skyline views</td>
+                </tr>
+                <tr>
+                    <td>Hermann Park & Zoo</td>
+                    <td>Spring & Fall</td>
+                    <td>Lush gardens & exotic animals</td>
+                    <td>Museum District</td>
+                    <td>$15</td>
+                    <td>Train rides, Japanese Garden, Over 6,000 animals</td>
+                </tr>
+                <tr>
+                    <td>The Galleria</td>
+                    <td>Year-round</td>
+                    <td>Luxury shopping & ice skating</td>
+                    <td>Uptown</td>
+                    <td>Free</td>
+                    <td>High-end brands, Indoor ice rink, Fine dining</td>
+                </tr>
+                <tr>
+                    <td>Minute Maid Park</td>
+                    <td>Baseball season</td>
+                    <td>Home of the Houston Astros</td>
+                    <td>Downtown</td>
+                    <td>$30</td>
+                    <td>Live MLB games, Retractable roof, Stadium tours</td>
+                </tr>
+                <tr>
+                    <td>Kemah Boardwalk</td>
+                    <td>Summer & Fall</td>
+                    <td>Waterfront amusement park</td>
+                    <td>Kemah</td>
+                    <td>Free (rides cost extra)</td>
+                    <td>Roller coasters, Seafood restaurants, Boat rides</td>
+                </tr>
+            </table>
+        </section>
+        <section id="things-to-do" class="content">
+            <h2>Things to Do</h2>
+            <ul>
+                <li>Explore the Space Center Houston</li>
+                <li>Visit the Houston Zoo</li>
+                <li>Try delicious Tex-Mex cuisine</li>
+                <li>Enjoy live music and theater in the downtown district</li>
+            </ul>
+            <h2>Top Attractions Ranked</h2>
+            <ol>
+                <li>Space Center Houston</li>
+                <li>Houston Museum of Natural Science</li>
+                <li>Hermann Park</li>
+                <li>Buffalo Bayou Park</li>
+            </ol>
+        </section>
+        <section id="faq" class="content faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <h3>What is the best time to visit Houston?</h3>
+                <p>The best time to visit Houston is during the spring (March to May) and fall (September to November) when the weather is pleasant and outdoor activities are enjoyable.</p>
             </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <div class="dot-container">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-        <p>Houston, Texas, is a dynamic metropolis that plays a crucial role in the United States and the world. Known as the "Space City," it is home to NASA’s Johnson Space Center, which has been at the forefront of space exploration for decades. Houston is also a global hub for the energy industry, particularly oil and gas, contributing significantly to the U.S. and international economies. Culturally, the city is a melting pot, with a diverse population that influences its world-renowned culinary scene, vibrant arts district, and rich musical heritage, spanning jazz, blues, and hip-hop. With top-tier medical institutions like the Texas Medical Center—the largest in the world—Houston is a leader in healthcare and innovation. This blend of scientific achievement, economic influence, and cultural diversity makes Houston a city of global significance.</p>
-    </section>
-    <section id="attractions" class="content">
-        <h2>Top Attractions</h2>
-        <table>
-            <tr>
-                <th>Attraction</th>
-                <th>Best Time to Visit</th>
-                <th>Famous For</th>
-                <th>Location</th>
-                <th>Entry Fee</th>
-                <th>Highlights</th>
-            </tr>
-            <tr>
-                <td>Space Center Houston</td>
-                <td>Spring & Fall</td>
-                <td>NASA exhibits & space history</td>
-                <td>Clear Lake</td>
-                <td>$25</td>
-                <td>Mission Control, Moon rocks, Astronaut encounters</td>
-            </tr>
-            <tr>
-                <td>Houston Museum of Natural Science</td>
-                <td>Year-round</td>
-                <td>Dinosaurs, gems, planetarium</td>
-                <td>Museum District</td>
-                <td>$20</td>
-                <td>Butterfly Center, IMAX Theatre, Fossil Hall</td>
-            </tr>
-            <tr>
-                <td>The Museum of Fine Arts</td>
-                <td>Year-round</td>
-                <td>Classical & contemporary art</td>
-                <td>Museum District</td>
-                <td>$18</td>
-                <td>Van Gogh & Picasso paintings, Photography exhibits</td>
-            </tr>
-            <tr>
-                <td>Buffalo Bayou Park</td>
-                <td>Spring & Fall</td>
-                <td>Scenic trails & outdoor activities</td>
-                <td>Downtown</td>
-                <td>Free</td>
-                <td>Kayaking, Cistern tours, Skyline views</td>
-            </tr>
-            <tr>
-                <td>Hermann Park & Zoo</td>
-                <td>Spring & Fall</td>
-                <td>Lush gardens & exotic animals</td>
-                <td>Museum District</td>
-                <td>$15</td>
-                <td>Train rides, Japanese Garden, Over 6,000 animals</td>
-            </tr>
-            <tr>
-                <td>The Galleria</td>
-                <td>Year-round</td>
-                <td>Luxury shopping & ice skating</td>
-                <td>Uptown</td>
-                <td>Free</td>
-                <td>High-end brands, Indoor ice rink, Fine dining</td>
-            </tr>
-            <tr>
-                <td>Minute Maid Park</td>
-                <td>Baseball season</td>
-                <td>Home of the Houston Astros</td>
-                <td>Downtown</td>
-                <td>$30</td>
-                <td>Live MLB games, Retractable roof, Stadium tours</td>
-            </tr>
-            <tr>
-                <td>Kemah Boardwalk</td>
-                <td>Summer & Fall</td>
-                <td>Waterfront amusement park</td>
-                <td>Kemah</td>
-                <td>Free (rides cost extra)</td>
-                <td>Roller coasters, Seafood restaurants, Boat rides</td>
-            </tr>
-        </table>
-    </section>
-    <section id="things-to-do" class="content">
-        <h2>Things to Do</h2>
+            <div class="faq-item">
+                <h3>Is Houston an expensive city to visit?</h3>
+                <p>Houston is relatively affordable compared to other major U.S. cities. While luxury experiences are available, many attractions, such as parks and museums, offer free or low-cost entry.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I get around in Houston?</h3>
+                <p>Houston has a well-developed public transportation system, including buses and light rail. However, renting a car is the most convenient way to explore the city.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What are some must-try foods in Houston?</h3>
+                <p>Some must-try foods in Houston include Tex-Mex cuisine, barbecue, and seafood. The city is known for its diverse culinary scene.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Are there any free attractions in Houston?</h3>
+                <p>Yes, there are many free attractions in Houston, including parks, museums, and cultural events. Buffalo Bayou Park and the Menil Collection are popular free attractions.</p>
+            </div>
+        </section>
+    </main>
+    <aside class="travel-tips">
+        <h2>Travel Tips</h2>
         <ul>
-            <li>Explore the Space Center Houston</li>
-            <li>Visit the Houston Zoo</li>
-            <li>Try delicious Tex-Mex cuisine</li>
-            <li>Enjoy live music and theater in the downtown district</li>
+            <li>Check the weather forecast before planning your trip.</li>
+            <li>Book tickets for popular attractions in advance.</li>
+            <li>Explore local dining options for authentic cuisine.</li>
+            <li>Wear comfortable shoes and stay hydrated during tours.</li>
+            <li>Plan your route to save time and avoid traffic.</li>
         </ul>
-        <h2>Top Attractions Ranked</h2>
-        <ol>
-            <li>Space Center Houston</li>
-            <li>Houston Museum of Natural Science</li>
-            <li>Hermann Park</li>
-            <li>Buffalo Bayou Park</li>
-        </ol>
-    </section>
-    <section id="faq" class="content faq">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h3>What is the best time to visit Houston?</h3>
-            <p>The best time to visit Houston is during the spring (March to May) and fall (September to November) when the weather is pleasant and outdoor activities are enjoyable.</p>
-        </div>
-        <div class="faq-item">
-            <h3>Is Houston an expensive city to visit?</h3>
-            <p>Houston is relatively affordable compared to other major U.S. cities. While luxury experiences are available, many attractions, such as parks and museums, offer free or low-cost entry.</p>
-        </div>
-        <div class="faq-item">
-            <h3>How do I get around in Houston?</h3>
-            <p>Houston has a well-developed public transportation system, including buses and light rail. However, renting a car is the most convenient way to explore the city.</p>
-        </div>
-    </section>
+    </aside>
     <footer>
-        <p>Contact us: info@discoverhouston.com</p>
-        <div class="social-media">
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
-            <a href="#">Twitter</a>
+        <div class="footer-content">
+            <p>Contact us: info@discoverhouston.com</p>
+            <p><a href="https://en.wikipedia.org/wiki/Houston" target="_blank">Learn more about Houston on Wikipedia</a></p>
         </div>
-        <p><a href="https://en.wikipedia.org/wiki/Houston" target="_blank">Learn more about Houston on Wikipedia</a></p>
+        <p class="footer-copy">Copyright © 2025 Discover Houston</p>
     </footer>
     <script>
         document.querySelectorAll('.faq-item h3').forEach(item => {
             item.addEventListener('click', () => {
                 const parent = item.parentElement;
+                const allFaqItems = document.querySelectorAll('.faq-item');
+                allFaqItems.forEach(faqItem => {
+                    if (faqItem !== parent) {
+                        faqItem.classList.remove('active');
+                        faqItem.querySelector('p').classList.remove('show');
+                    }
+                });
                 parent.classList.toggle('active');
                 parent.querySelector('p').classList.toggle('show');
             });
