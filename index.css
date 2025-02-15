@@ -2,59 +2,59 @@ body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #f4f4f9;
 }
 
 header {
-    background: linear-gradient(135deg, #004080, #4CAF50);
+    background: linear-gradient(135deg, #003366, #66ccff);
     color: white;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
-    border-bottom: 2px solid #388E3C;
-    font-family: 'Open Sans', sans-serif;
+    border-bottom: 3px solid #00509e;
+    font-family: 'Playfair Display', serif;
+}
+
+header > h1 {
+    font-size: 3em;
+    font-family: 'Playfair Display', serif;
 }
 
 nav {
-    background-color: #333;
+    background-color: #00509e;
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 15px;
 }
 
 nav a {
-    color: white;
     text-align: center;
-    padding: 14px 20px;
+    padding: 14px 25px;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px;
     font-family: 'Roboto', sans-serif;
-    color: #FFD700;
+    color: #ffcc00;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a + a {
+    margin-left: 20px;
 }
 
 nav a:link {
-    color: #FFD700; /* Default style for unvisited links */
+    color: #ffcc00; /* Default style for unvisited links */
 }
 
 nav a:visited {
-    color: #DAA520; /* Style for visited links */
+    color: #ffcc00; /* Style for visited links */
 }
 
 nav a:hover {
-    background-color: #FF6347;
-    color: #FFFFFF;
+    background-color: #ffcc00;
+    color: #00509e;
 }
 
 nav a:active {
-    color: #FF4500; /* Style when clicking */
-}
-
-.header {
-    background-color: #004080;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    font-family: 'Open Sans', sans-serif;
+    color: #ff4500; /* Style when clicking */
 }
 
 .hero-image {
@@ -67,29 +67,40 @@ nav a:active {
 
 .content {
     margin: 20px;
-    padding: 20px;
+    padding: 25px;
     background: white;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     font-family: 'Open Sans', sans-serif;
+}
+
+.content > h2 {
+    color: #00509e;
+    font-family: 'Playfair Display', serif;
+    border-bottom: 2px solid #66ccff;
+    padding-bottom: 10px;
+}
+
+.content p ~ p {
+    margin-top: 15px;
 }
 
 p {
     font-size: 16px;
-    color: #4B0082;
+    color: #333;
     text-align: justify;
-    line-height: 1.6;
+    line-height: 1.8;
     font-family: 'Open Sans', sans-serif;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
+    margin-top: 20px;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 table, th, td {
@@ -97,12 +108,12 @@ table, th, td {
 }
 
 th, td {
-    padding: 10px;
+    padding: 15px;
     text-align: center;
 }
 
 th {
-    background-color: #004080;
+    background-color: #00509e;
     color: white;
     font-family: 'Open Sans', sans-serif;
 }
@@ -117,11 +128,11 @@ tr:hover {
 }
 
 ul, ol {
-    padding-left: 20px;
+    padding-left: 25px;
     background-color: white;
     margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -140,82 +151,157 @@ ul li::before, ol li::before {
 }
 
 ul li, ol li {
-    color: #4B0082;
+    color: #333;
 }
 
 li {
-    margin: 5px 0;
+    margin: 10px 0;
 }
 
 .faq {
     margin-top: 20px;
+    background-color: #ffffff; /* Ensure entire FAQ section background is white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .faq h3 {
-    color: #004080;
-    font-family: 'Open Sans', sans-serif;
+    color: #00509e;
+    font-family: 'Playfair Display', serif;
+    background-color: #ffffff; /* Ensure FAQ question background is white */
+    padding: 10px;
+    border-radius: 8px;
 }
 
 .faq p {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-family: 'Open Sans', sans-serif;
 }
 
 .faq-item {
-    margin-bottom: 10px;
+    margin-bottom: 0px; /* reduced gap */
+    background-color: #ffffff; /* Ensure entire FAQ item background is white */
+    border-radius: 8px;
+    padding: 5px; /* reduced padding */
 }
 
 .faq-item h3 {
     cursor: pointer;
-    color: #004080;
-    font-family: 'Open Sans', sans-serif;
+    color: #00509e;
+    font-family: 'Playfair Display', serif;
+    background-color: #ffffff; /* White background for FAQ questions */
+    padding: 5px; /* reduced padding */
+    margin: 0;    /* remove default margin */
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.faq-item h3::after {
+    content: "\25BC"; /* dropdown arrow (down) */
+    float: right;
+    transition: transform 0.3s;
+}
+
+.faq-item.active h3::after {
+    transform: rotate(180deg); /* arrow rotates when active */
+}
+
+.faq-item h3:hover {
+    background-color: #ffffff; /* Changed from grey (#f2f2f2) to white */
 }
 
 .faq-item p {
     display: none;
-    margin-top: 5px;
+    margin-top: 10px;
+    background-color: #ffffff; /* White background for expanded answers */
+    border: 2px solid #00509e; /* added blue rectangular border */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: none;     /* Removed box shadow */
+    transition: all 0.3s ease;
 }
 
 .faq-item p.show {
     display: block;
+    background-color: #ffffff; /* Ensure background is white when expanded */
+}
+
+.faq, .faq-item, .faq-item h3, .faq-item p {
+    background-color: #ffffff !important;
 }
 
 footer {
-    background-color: #2F4F4F;
+    background-color: #003366;
     color: #FFFFFF;
     text-align: center;
-    padding: 5px;
+    padding: 15px;
     position: relative;
     width: 100%;
     bottom: 0;
-    border-top: 1px solid #555;
+    border-top: 2px solid #00509e;
     font-family: 'Open Sans', sans-serif;
 }
 
 footer .social-media a {
     color: white;
-    margin: 0 10px;
+    margin: 0 15px;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 footer .social-media a:hover {
-    color: #4CAF50;
+    color: #66ccff;
 }
 
 footer a:link {
-    color: #FFD700; /* Default style for unvisited external link */
+    color: #ffcc00; /* Default style for unvisited external link */
 }
 
 footer a:visited {
-    color: #DAA520; /* Style for visited external link */
+    color: #ffcc00; /* Style for visited external link */
 }
 
 footer a:hover {
-    color: #4CAF50; /* Style for hovering over external link */
+    color: #66ccff; /* Style for hovering over external link */
 }
 
 footer a:active {
-    color: #FF4500; /* Style when clicking external link */
+    color: #ff4500; /* Style when clicking external link */
+}
+
+footer > p:first-child {
+    color: #ffd700; /* beautiful gold for contact us text */
+}
+
+.footer-content {
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.footer-content p,
+.footer-content a {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #ffd700; /* use gold for a striking look */
+}
+
+/* Ensure footer links retain attractive hover effect */
+.footer-content a:hover {
+    color: #ffcc00;
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    color: #ffffff; /* white text */
+    margin-top: 15px;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    background: linear-gradient(135deg, #003366, #66ccff);
+    box-shadow: 0px -2px 5px rgba(0,0,0,0.2);
 }
 
 @media (max-width: 768px) {
@@ -224,12 +310,12 @@ footer a:active {
     }
 
     nav a {
-        margin: 5px 0;
+        margin: 10px 0;
     }
 
     .content {
         margin: 10px;
-        padding: 15px;
+        padding: 20px;
     }
 
     table, th, td {
@@ -239,7 +325,7 @@ footer a:active {
 
 /* Additional styles for multiple colors and fonts */
 h1, h2, h3 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Playfair Display', serif;
     color: #2E8B57;
 }
 
@@ -259,4 +345,21 @@ h3 {
 p, li {
     font-family: 'Open Sans', sans-serif;
     color: #4B0082;
+}
+
+.travel-tips {
+    margin: 20px;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Add/update travel tips heading style */
+.travel-tips h2 {
+    color: #00509e;
+    font-family: 'Playfair Display', serif;
+    border-bottom: 2px solid #66ccff;
+    padding-bottom: 10px;
 }
